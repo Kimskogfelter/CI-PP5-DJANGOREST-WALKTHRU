@@ -116,9 +116,8 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
         rf"{extracted_url}(eu|us)\d+\w\.gitpod\.io$",
     ]
 
-CORS_ALLOWED_ORIGINS = [
-    'https://3000-kimskogfelt-cipp5moment-gn7qyks86r9.ws-eu111.gitpod.io',
-]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_CREDENTIALS = True
 
