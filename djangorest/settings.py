@@ -101,9 +101,9 @@ SITE_ID = 1
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -117,7 +117,10 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
     ]
 
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOWED_ORIGINS = [
+    "https://3000-kimskogfelt-cipp5moment-gn7qyks86r9.ws-eu111.gitpod.io",
+
+]
 
 CORS_ALLOW_CREDENTIALS = True
 
